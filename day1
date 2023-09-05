@@ -1,0 +1,23 @@
+import os
+
+
+def run():
+    config_filename = os.getcwd() + "/nbrs"
+    file = open(config_filename, 'r').read()
+    arr = file.splitlines();
+    counter = 0
+    counter2 = 0
+    lastnbrs = arr[0]
+    x = range(2000-3)
+    for i in x:
+        A = int(arr[i]) + int(arr[i+1]) +int(arr[i+2])
+        B = int(arr[i+1]) + int(arr[i+2]) +int(arr[i+3])
+        if B>A:
+            counter +=1
+
+    print(counter)
+    print(counter2)
+
+
+if __name__ == '__main__':
+    run()
